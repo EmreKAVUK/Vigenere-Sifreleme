@@ -6,7 +6,7 @@ def encrypt():
     global liste
     global key
     i = 0
-    msg = input("Enter your message")
+    msg = input("Enter your message").replace(" ","")
     while i<len(msg):
         k = ((alfabe[msg[i]]+alfabe[key[i%len(key)]])%26)
         if k == 0:
@@ -32,6 +32,7 @@ def decrypt():
 encrypt()
 print("Sifreli metin",end="\t")
 print(liste)
+#Zaten var olan metni çözmek icin üstteki 3 lüyü yorum satırına al ve listeye gerekli degeri ata
 decrypt()
 print("DeSifreli metin",end="\t")
 print(liste2)
